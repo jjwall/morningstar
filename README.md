@@ -1,9 +1,7 @@
 # Morningstar
 
 ## Overview
-The goal of this project is to provide initialization and automation scripts to assist optical engineers using a daisychain of hardware devices (the [MIRcat Mid-IR Laser](https://www.daylightsolutions.com/products/mircat/) and [PicoScope 5444D](https://www.picotech.com/oscilloscope/5000/flexible-resolution-oscilloscope?kit=5444D)) to easily run experiments.
-
-Morningstar is an easy-to-use software that optical engineers can use to support experiments such as identifying various types of molecules and their quantity present in test tubes via this daisychain of instruments and spectroscopy.
+Morningstar is an easy-to-use software that orchestrates the functionalities of the [MIRcat](https://www.daylightsolutions.com/products/mircat/) quantum-cascade laser and [PicoScope 5444D](https://www.picotech.com/oscilloscope/5000/flexible-resolution-oscilloscope?kit=5444D) oscilloscope. Optical engineers can use Morningstar to rapidly run spectroscopic experiments such as identifying various types of molecules and their quantity present in test tubes. The goal of this project is to minimize the overhead required to initialize these instruments and provide a simple solution to automate this type of experimentation.
 
 ## Software Architecture
 ### Scripts
