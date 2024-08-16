@@ -11,7 +11,7 @@ Coming soon...
 A [Python 3.10 environment](https://apps.microsoft.com/detail/9pjpw5ldxlz5?hl=en-US&gl=US) is used to interface with the PicoScope 5444D and MIRcat laser. A set of scripts to both initialize and automate these hardware devices can be found in ``/scripts``.
 
 ### GUI
-A non-realtime build of [Godot 4.3](https://godotengine.org/releases/4.3/) is used for the Graphical User Interface to trigger and pass in flags to the scripts mentioned above. The code and files for the Godot application GUI can be found in ``/gui``.
+A build of [Godot 4.3](https://godotengine.org/releases/4.3/) with low processor mode turned on is used for the Graphical User Interface to trigger and pass in flags to the scripts mentioned above. The code and files for the Godot application GUI can be found in ``/gui``.
 
 ## Builds
 All versions of Morningstar can be downloaded [here](https://github.com/jjwall/morningstar/tags).
