@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpmefhvf5myj3"]
+[gd_scene load_steps=3 format=3 uid="uid://cpmefhvf5myj3"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_2om02"]
 [ext_resource type="Texture2D" uid="uid://dtd3fj22o0cy5" path="res://assets/textures/ui_background.png" id="1_77qsr"]
 
 [node name="Main" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2om02")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -31,3 +33,6 @@ offset_right = 340.0
 offset_bottom = 600.0
 text = "Test Script 2
 "
+
+[connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
