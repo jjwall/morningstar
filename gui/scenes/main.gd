@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 func _on_button_1_pressed() -> void:
 	var outputs = []
-	OS.execute('../scripts/dist/morningstar_scripts/test_script1.exe', [], outputs)
+	OS.execute('../scripts/dist/morningstar_scripts/test_script1.exe', [5, "hello"], outputs)
 	print(outputs[0].split('\r\n'))
 
 
