@@ -7,6 +7,6 @@ def init_subparsers(subparsers: argparse._SubParsersAction):
     parser_test_picosdk_module.set_defaults(func=test_picosdk_module)
 
 def test_picosdk_module(args):
-    print(args.my_integer)
+    print(args.my_integer + 3)
     print(args.my_string)
     print("hi there picosdk")

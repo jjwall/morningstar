@@ -1,4 +1,4 @@
 extends Node
 
-enum env_types {DEV, PROD}
-const env: env_types = env_types.DEV
+enum env_types {LOCAL, DEV, PROD}
+const env: env_types = env_types.LOCAL
