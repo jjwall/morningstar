@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_1_pressed() -> void:
-	print(Python.exec_main_script(7, "hiiiii"))
+	print(Python.exec_test_picosdk_module(7, "hiiiii"))
 
 
 func _on_button_2_pressed() -> void:

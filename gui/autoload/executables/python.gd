@@ -5,19 +5,19 @@ const prod_python_path = '../scripts/dist/morningstar_scripts/main.exe'
 
 func _execute_python_script(args: PackedStringArray) -> Array:
 	if Configs.env == Configs.env_types.DEV:
-		print("DEV PATH")
+		print("EXECUTING FROM DEV ENV")
 		var outputs = []
 		var path_to_script: PackedStringArray = [dev_python_path]
 		OS.execute("python", path_to_script + args, outputs, true)
 		return outputs[0].split('\r\n')
 	elif Configs.env == Configs.env_types.PROD:
-		print("PROD PATH")
+		print("EXECUTING FROM PROD ENV")
 		var outputs = []
 		OS.execute(prod_python_path, args, outputs, true)
 		return outputs[0].split('\r\n')
 	else:
 		return ['Set env configs']
 
-func exec_main_script(arg1: int, arg2: String):
-	var args = [arg1, arg2]
+func exec_test_picosdk_module(arg1: int, arg2: String):
+	var args = ['test_picosdk_module', arg1, arg2]
 	return _execute_python_script(args)
