@@ -1,7 +1,7 @@
 extends Node
 
-const dev_python_path = '../scripts/test_script1.py'
-const prod_python_path = '../scripts/dist/morningstar_scripts/test_script1.exe'
+const dev_python_path = '../scripts/main.py'
+const prod_python_path = '../scripts/dist/morningstar_scripts/main.exe'
 
 func _execute_python_script(args: PackedStringArray) -> Array:
 	if Configs.env == Configs.env_types.DEV:
@@ -18,6 +18,6 @@ func _execute_python_script(args: PackedStringArray) -> Array:
 	else:
 		return ['Set env configs']
 
-func exec_test_script1(arg1: int, arg2: String):
+func exec_main_script(arg1: int, arg2: String):
 	var args = [arg1, arg2]
 	return _execute_python_script(args)
