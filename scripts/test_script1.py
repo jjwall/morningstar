@@ -7,6 +7,7 @@ def main(arg1: int, arg2: str):
     print(result) # will need to json.stringify
     return result
 
+# TODO: Use subcommands instead of multiple entry points.
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("my_integer", type=int)
