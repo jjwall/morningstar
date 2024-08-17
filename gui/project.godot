@@ -16,6 +16,11 @@ config/features=PackedStringArray("4.3", "Mobile")
 run/low_processor_mode=true
 config/icon="res://icon.svg"
 
+[autoload]
+
+Configs="*res://autoload/globals/configs.gd"
+PythonScripts="*res://autoload/executables/python_scripts.gd"
+
 [rendering]
 
 renderer/rendering_method="mobile"

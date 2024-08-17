@@ -2,7 +2,7 @@ import argparse
 
 def main(arg1: int, arg2: str):
     result = "hello from test_script1"
-    print(arg1 + 3)
+    print(arg1 + 7)
     print(arg2)
     print(result) # will need to json.stringify
     return result

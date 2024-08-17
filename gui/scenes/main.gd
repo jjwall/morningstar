@@ -12,12 +12,10 @@ func _process(delta: float) -> void:
 
 
 func _on_button_1_pressed() -> void:
-	var outputs = []
-	OS.execute('../scripts/dist/morningstar_scripts/test_script1.exe', [5, "hello"], outputs)
-	print(outputs[0].split('\r\n'))
+	print(PythonScripts.exec_test_script1(7, "hiiiii"))
 
 
 func _on_button_2_pressed() -> void:
 	var outputs = []
-	OS.execute('../scripts/dist/morningstar_scripts/test_script2.exe', [], outputs)
+	OS.execute('../scripts/dist/morningstar_scripts/test_script2.exe', [], outputs, true)
 	print(outputs[0].split('\r\n'))
