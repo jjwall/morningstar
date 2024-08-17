@@ -16,6 +16,4 @@ func _on_button_1_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	var outputs = []
-	OS.execute('../scripts/dist/morningstar_scripts/test_script2.exe', [], outputs, true)
-	print(outputs[0].split('\r\n'))
+	print(Python.exec_test_mircatsdk_module("hey there", 11))

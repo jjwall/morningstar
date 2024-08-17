@@ -18,6 +18,10 @@ func _execute_python_script(args: PackedStringArray) -> Array:
 	else:
 		return ['Set env configs']
 
-func exec_test_picosdk_module(arg1: int, arg2: String):
-	var args = ['test_picosdk_module', arg1, arg2]
+func exec_test_picosdk_module(my_integer: int, my_string: String):
+	var args = ['test_picosdk_module', my_integer, my_string]
+	return _execute_python_script(args)
+
+func exec_test_mircatsdk_module(my_string: String, my_integer: int):
+	var args = ['test_mircatsdk_module', my_string, my_integer]
 	return _execute_python_script(args)
