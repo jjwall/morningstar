@@ -1,5 +1,6 @@
 # Custom modules
 from modules import picosdk
+from modules import mircatsdk
 # Packages
 import argparse
 
@@ -11,10 +12,11 @@ def main():
 def parse_args():
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(required=True)
-    picosdk.init_subparsers(subparsers)
 
-    # parser.add_argument("my_integer", type=int)
-    # parser.add_argument("my_string")
+    # Initialize subparsers.
+    picosdk.init_subparsers(subparsers)
+    mircatsdk.init_subparsers(subparsers)
+
     return parser.parse_args()
 
 if __name__ == "__main__":
