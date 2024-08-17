@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Configs="*res://autoload/globals/configs.gd"
-PythonScripts="*res://autoload/executables/python_scripts.gd"
+Python="*res://autoload/executables/python.gd"
 
 [rendering]
 

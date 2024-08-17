@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_1_pressed() -> void:
-	print(PythonScripts.exec_test_script1(7, "hiiiii"))
+	print(Python.exec_test_script1(7, "hiiiii"))
 
 
 func _on_button_2_pressed() -> void:
