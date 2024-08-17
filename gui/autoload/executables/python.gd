@@ -10,14 +10,14 @@ const dev_python_path = 'python' # assuming system variable is configured
 
 #region Private python utility methods
 func _execute_python_program(args: PackedStringArray) -> Array:
-	if Configs.env == Configs.env_types.LOCAL:
-		print("EXECUTING FROM LOCAL ENV")
+	if Configs.python_env == Configs.python_env_types.VIRTUAL:
+		print("EXECUTING main.py USING PROJECT'S VIRTUAL PYTHON INTERPRETER")
 		return _execute_plaintext_python_script(local_python_path, args)
-	elif Configs.env == Configs.env_types.DEV:
-		print("EXECUTING FROM DEV ENV")
+	elif Configs.python_env == Configs.python_env_types.SYSTEM:
+		print("EXECUTING main.py USING SYSTEM ENVIRONMENT'S PYTHON INTERPRETER")
 		return _execute_plaintext_python_script(dev_python_path, args)
-	elif Configs.env == Configs.env_types.PROD:
-		print("EXECUTING FROM PROD ENV")
+	elif Configs.python_env == Configs.python_env_types.PACKAGE:
+		print("EXECUTING main.exe COMPILED FROM LATEST PYINSTALLER PACKAGE")
 		return _execute_compiled_python_program(args)
 	else:
 		return ['Set env configs']
