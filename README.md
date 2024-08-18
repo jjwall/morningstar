@@ -15,3 +15,48 @@ A build of [Godot 4.3](https://godotengine.org/releases/4.3/) with low processor
 
 ## Builds
 All versions of Morningstar can be downloaded [here](https://github.com/jjwall/morningstar/tags).
+
+## Dev Setup
+
+### Python Environment Config
+The GUI contains python environment configs in ``gui/autoload/globals/configs.gd``
+
+The different environments are distinguished as follows:
+
+```gdscript
+enum python_env_types {
+	VIRTUAL, # Targets Python interpeter in project's root level virtual env.
+	SYSTEM, # Targets Python interpreter configured in system's environment.
+	PACKAGE, # Targets Pyinstaller package. No Python interpeter necessary.
+}
+```
+
+### Virtual Environment Setup
+
+To make use of the ``VIRTUAL`` Python environment mentioned above, perform the following steps:
+* Install [Python 3.10.11](https://www.python.org/downloads/release/python-31011/)
+* At root directory, create a virtual Python environment for the project by running:
+
+```powershell
+python -m venv .venv
+```
+
+* PowerShell users may need to run the following command to enable running Powershell scripts:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```
+
+* Activate the virtual Python environment by running:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+* ``cd /scripts``
+
+* Install Python dependencies by running:
+
+```powershell
+pip install -r requirements.txt
+```
