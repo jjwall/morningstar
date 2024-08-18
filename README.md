@@ -13,6 +13,9 @@ A [Python 3.10 environment](https://www.python.org/downloads/release/python-3101
 ### GUI
 A build of [Godot 4.3](https://godotengine.org/releases/4.3/) with low processor mode turned on is used for the Graphical User Interface to trigger and pass in flags to the scripts mentioned above. The code and files for the Godot application GUI can be found in ``/gui``.
 
+### Dependencies
+The 64-bit version of the PicoSDK C Libraries is used by the PicoSDK Python wrappers within this project to interface with PS5000 series hardware devices. A download link of the binaries can be found [here](https://www.picotech.com/downloads/_lightbox/pico-software-development-kit-64bit) from Pico Technology's [downloads page](https://www.picotech.com/downloads).
+
 ## Builds
 All versions of Morningstar can be downloaded [here](https://github.com/jjwall/morningstar/tags).
 
