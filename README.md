@@ -19,17 +19,19 @@ All versions of Morningstar can be downloaded [here](https://github.com/jjwall/m
 ## Dev Setup
 
 ### Python Environment Config
-The GUI contains python environment configs in ``gui/autoload/globals/configs.gd``
+The GUI contains Python environment configs in ``gui/autoload/globals/configs.gd``
 
 The different environments are distinguished as follows:
 
 ```gdscript
 enum python_env_types {
-	VIRTUAL, # Targets Python interpeter in project's root level virtual env.
-	SYSTEM, # Targets Python interpreter configured in system's environment.
-	PACKAGE, # Targets Pyinstaller package. No Python interpeter necessary.
+  VIRTUAL, # Targets Python interpeter in project's root level virtual env.
+  SYSTEM, # Targets Python interpreter configured in system's environment.
+  PACKAGE, # Targets Pyinstaller package. No Python interpeter necessary.
 }
 ```
+
+> <b>Note</b>: The Python environment can be modified by updating the value of the ``python_env`` global config variable.
 
 ### Virtual Environment Setup
 
@@ -60,3 +62,5 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```powershell
 pip install -r requirements.txt
 ```
+
+> <b>Note</b>: The end user has the option to switch between ``SYSTEM`` and ``PACKAGE`` environments within the GUI based on their experiment's requirements.
