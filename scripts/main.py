@@ -4,6 +4,7 @@ from modules import mircatsdk
 
 # Packages
 import argparse
+# import numpy
 
 # TODO: test out json.stringify outputs
 def main():
