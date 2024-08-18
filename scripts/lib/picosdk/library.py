@@ -178,6 +178,11 @@ class Library(object):
             handle = chandle.value
         else:
             handle = self._open_unit()
+            # Some modifications for testing - jjwall on 08/18/2024:
+            # print("****** LOG ARGS *********")
+            # chandle = c_int16()
+            # handle = self._open_unit(byref(chandle))
+            # handle = chandle.value
 
         return handle, status
 

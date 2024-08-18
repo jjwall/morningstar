@@ -18,6 +18,8 @@ status = {}
 # Open 5000 series PicoScope
 # Returns handle to chandle for use in future API functions
 status["openunit"] = ps.ps5000OpenUnit(ctypes.byref(chandle))
+print("******* LOGGING ******")
+print(status["openunit"])
 assert_pico_ok(status["openunit"])
 
 
