@@ -1,8 +1,8 @@
 extends Node
 
 # Python program entry points.
-const path_to_script_entry_point = '../morningstar/main.py'
-const path_to_exe_entry_point = '../morningstar/dist/morningstar/main.exe'
+const path_to_script_entry_point = '../scripts/main.py'
+const path_to_exe_entry_point = '../scripts/dist/morningstar/main.exe'
 
 # Python environment paths.
 const local_python_path = '../.venv/Scripts/python.exe'
@@ -35,8 +35,8 @@ func _execute_compiled_python_program(args: PackedStringArray) -> Array:
 #endregion
 
 #region Public python helpers to be consumed by GUI
-func exec_test_picosdk_module(my_integer: int, my_string: String):
-	var args = ['test_picosdk_module', my_integer, my_string]
+func exec_capture_wavelengths():
+	var args = ['capture_wavelengths']
 	return _execute_python_program(args)
 
 func exec_test_mircatsdk_module(my_string: String, my_integer: int):

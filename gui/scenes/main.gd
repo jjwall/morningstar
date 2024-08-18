@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_1_pressed() -> void:
-	print(Python.exec_test_picosdk_module(7, "hiiiii"))
+	print(Python.exec_capture_wavelengths())
 
 
 func _on_button_2_pressed() -> void:
