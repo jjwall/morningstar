@@ -1,1 +1,1 @@
-from .utils import init_subparsers
+from morningstar.modules.mircatsdk.utils import init_subparsers # type: ignore

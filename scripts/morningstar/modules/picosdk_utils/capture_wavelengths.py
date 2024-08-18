@@ -8,8 +8,8 @@ import argparse
 import ctypes
 import numpy as np
 import matplotlib.pyplot as plt
-from ...lib.picosdk.ps5000a import ps5000a as ps
-from ...lib.picosdk.functions import adc2mV, assert_pico_ok, mV2adc
+from morningstar.lib.picosdk.ps5000a import ps5000a as ps # type: ignore
+from morningstar.lib.picosdk.functions import adc2mV, assert_pico_ok, mV2adc # type: ignore
 
 def init_subparsers(subparsers: argparse._SubParsersAction):
     parser_test_picosdk_module = subparsers.add_parser('capture_wavelengths')
