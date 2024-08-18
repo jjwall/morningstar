@@ -7,8 +7,8 @@ Morningstar is an easy-to-use software application that orchestrates the functio
 Coming soon...
 
 ## Software Architecture
-### Scripts
-A [Python 3.10 environment](https://www.python.org/downloads/release/python-31011/) is used to interface with the PicoScope 5444D and MIRcat laser. A set of scripts to both initialize and automate these hardware devices can be found in ``/scripts``.
+### Python Scripting Layer
+A [Python 3.10 environment](https://www.python.org/downloads/release/python-31011/) is used to interface with the PicoScope 5444D and MIRcat laser. A set of scripts to both initialize and automate these hardware devices can be found in ``/morningstar``.
 
 ### GUI
 A build of [Godot 4.3](https://godotengine.org/releases/4.3/) with low processor mode turned on is used for the Graphical User Interface to trigger and pass in flags to the scripts mentioned above. The code and files for the Godot application GUI can be found in ``/gui``.
