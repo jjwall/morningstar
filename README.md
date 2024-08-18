@@ -19,7 +19,7 @@ All versions of Morningstar can be downloaded [here](https://github.com/jjwall/m
 ## Dev Setup
 
 ### Python Environment Config
-The GUI contains Python environment configs in ``gui/autoload/globals/configs.gd``
+The GUI contains Python environment configs in [gui/autoload/globals/configs.gd](gui/autoload/globals/configs.gd)
 
 The different environments are distinguished as follows:
 
