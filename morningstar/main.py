@@ -1,5 +1,5 @@
 # Custom modules
-from modules.picosdk_utils import capture_wavelengths
+# from modules.picosdk_utils import capture_wavelengths
 from modules import mircatsdk
 
 # Packages
@@ -16,7 +16,7 @@ def parse_args():
     subparsers = parser.add_subparsers(required=True)
 
     # Initialize subparsers.
-    capture_wavelengths.init_subparsers(subparsers)
+    # capture_wavelengths.init_subparsers(subparsers)
     mircatsdk.init_subparsers(subparsers)
 
     return parser.parse_args()

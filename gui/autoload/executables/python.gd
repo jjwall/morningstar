@@ -1,8 +1,8 @@
 extends Node
 
 # Python program entry points.
-const path_to_script_entry_point = '../scripts/main.py'
-const path_to_exe_entry_point = '../scripts/dist/morningstar_scripts/main.exe'
+const path_to_script_entry_point = '../morningstar/main.py'
+const path_to_exe_entry_point = '../morningstar/dist/morningstar/main.exe'
 
 # Python environment paths.
 const local_python_path = '../.venv/Scripts/python.exe'
