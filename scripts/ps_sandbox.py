@@ -9,13 +9,13 @@ from lib.picosdk.ps5000a import ps5000a as ps
 from lib.picosdk.functions import adc2mV, assert_pico_ok, mV2adc
 
 chandle = ctypes.c_int16()
-# status = {}
+status = {}
 
 
 resolution = ps.PS5000A_DEVICE_RESOLUTION["PS5000A_DR_12BIT"]
-device = ps.open_unit(None, resolution)
+# device = ps.open_unit(None, resolution)
 
-# status["openunit"] = ps.ps5000aOpenUnit(ctypes.byref(chandle), None, resolution)
+status["openunit"] = ps.ps5000aOpenUnit(ctypes.byref(chandle), None, resolution)
 
 # try:
 #     assert_pico_ok(status["openunit"])
@@ -32,4 +32,5 @@ device = ps.open_unit(None, resolution)
 
 #     assert_pico_ok(status["changePowerSource"])
 
-ps.close_unit(device)
+# ps.close_unit(device)
+ps.ps5000aCloseUnit(chandle)
