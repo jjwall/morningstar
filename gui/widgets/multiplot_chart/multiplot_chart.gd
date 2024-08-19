@@ -10,6 +10,11 @@ func plot_points(voltages):
 		f1.add_point(n + 1, voltages[n])
 		chart.queue_redraw()
 
+func reset_chart():
+	f1.__x = [0, 1000, 2000, 3000, 4000, 5000]
+	f1.__y = [-1000, -1000, -1000, -1000, -1000, -1000]
+	chart.queue_redraw()
+
 func _ready():
 	# Let's create our @x values
 	#var x: Array = ArrayOperations.multiply_float(range(-10, 11, 1), 0.5)
@@ -29,11 +34,12 @@ func _ready():
 	cp.colors.ticks = Color("#283442")
 	cp.colors.text = Color.WHITE_SMOKE
 	cp.draw_bounding_box = false
-	cp.show_legend = true
+	#cp.show_legend = true
 	cp.title = "Wavelengths Chart"
 	cp.x_label = "Time (800 n/s)"
 	cp.y_label = "Voltage (mV)"
 	cp.x_scale = 5
+	cp.x_scale_type = 1
 	cp.y_scale = 6
 	cp.interactive = true # false by default, it allows the chart to create a tooltip to show point values
 	cp.max_samples = 5000

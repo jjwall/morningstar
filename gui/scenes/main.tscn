@@ -21,19 +21,19 @@ texture = ExtResource("1_77qsr")
 
 [node name="Button1" type="Button" parent="."]
 layout_mode = 0
-offset_left = 94.0
-offset_top = 569.0
-offset_right = 197.0
-offset_bottom = 600.0
-text = "Test Script 1"
+offset_left = 62.0
+offset_top = 423.0
+offset_right = 165.0
+offset_bottom = 454.0
+text = "Initiate"
 
 [node name="Button2" type="Button" parent="."]
 layout_mode = 0
-offset_left = 237.0
-offset_top = 569.0
-offset_right = 340.0
-offset_bottom = 600.0
-text = "Test Script 2
+offset_left = 63.0
+offset_top = 475.0
+offset_right = 166.0
+offset_bottom = 506.0
+text = "Reset
 "
 
 [node name="BarChart" parent="." instance=ExtResource("3_o3hiu")]

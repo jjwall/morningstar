@@ -21,4 +21,5 @@ func _on_button_1_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	print(Python.exec_test_mircatsdk_module("hey there", 11))
+	$MultiplotChart.reset_chart()
+	#print(Python.exec_test_mircatsdk_module("hey there", 11))
