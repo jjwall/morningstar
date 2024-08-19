@@ -34,7 +34,7 @@ func _ready():
 	cp.x_label = "Time (800 n/s)"
 	cp.y_label = "Voltage (mV)"
 	cp.x_scale = 5
-	cp.y_scale = 10
+	cp.y_scale = 6
 	cp.interactive = true # false by default, it allows the chart to create a tooltip to show point values
 	cp.max_samples = 5000
 	# and interecept clicks on the plot
