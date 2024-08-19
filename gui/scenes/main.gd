@@ -15,7 +15,8 @@ func _on_button_1_pressed() -> void:
 	var outputs = Python.exec_capture_wavelengths()
 	var voltages = str_to_var(outputs[1])
 	#$WavelengthChart.plot_chart(voltages)
-	print(voltages)
+	#print(voltages)
+	$BarChart.plot_points(voltages)
 
 
 func _on_button_2_pressed() -> void:
