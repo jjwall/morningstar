@@ -21,6 +21,10 @@ config/icon="res://icon.svg"
 Configs="*res://autoload/globals/configs.gd"
 Python="*res://autoload/executables/python.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [rendering]
 
 renderer/rendering_method="mobile"
