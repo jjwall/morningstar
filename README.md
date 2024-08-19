@@ -8,7 +8,7 @@ Coming soon...
 
 ## Software Architecture
 ### Python Scripting Layer
-A [Python 3.10 environment](https://www.python.org/downloads/release/python-31011/) is used to interface with the PicoScope 5444D and MIRcat laser. A set of scripts to both initialize and automate these hardware devices can be found in ``/morningstar``.
+A [Python 3.10 environment](https://www.python.org/downloads/release/python-31011/) is used to interface with the PicoScope 5444D and MIRcat laser. A set of scripts to both initialize and automate these hardware devices can be found in ``/scripts``.
 
 ### GUI
 A build of [Godot 4.3](https://godotengine.org/releases/4.3/) with low processor mode turned on is used for the Graphical User Interface to trigger and pass in flags to the scripts mentioned above. The code and files for the Godot application GUI can be found in ``/gui``.
@@ -24,7 +24,7 @@ Coming soon...
 ## Builds
 All versions of Morningstar can be downloaded [here](https://github.com/jjwall/morningstar/tags).
 
-## Dev Setup
+## Contributor Guide
 
 ### Python Environment Config
 The GUI contains Python environment configs in [gui/autoload/globals/configs.gd](gui/autoload/globals/configs.gd).
@@ -40,6 +40,8 @@ enum python_env_types {
 ```
 
 > <b>Note</b>: The Python environment can be modified by updating the value of the ``python_env`` global config variable.
+
+When developing you'll likely be using the ``VIRTUAL`` or ``SYSTEM`` environment configs depending on your preference. ``PACKAGE`` should be used when testing the end deliverable.
 
 ### Virtual Environment Setup
 
@@ -71,4 +73,27 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 pip install -r requirements.txt
 ```
 
-> <b>Note</b>: The end user has the option to switch between ``SYSTEM`` and ``PACKAGE`` environments within the GUI based on their experiment's requirements.
+> <b>Note</b>: The end user will have the option to switch between ``SYSTEM`` and ``PACKAGE`` environments within the GUI based on their experiment's requirements.
+
+### Godot GUI
+Download [Godot 4.3](https://godotengine.org/releases/4.3/) and extract the contents to your desired location. Run the ``Godot_v4.3-stable_win64.exe`` program and import the ``project.godot`` file that can be found here: [gui/project.godot](gui/project.godot).
+
+Godot is a great tool for making video games and GUI driven software applications. If you're new to using it, [GDQuest](https://www.gdquest.com/) has some great free guides to get started with.
+
+### Packaging
+#### Python
+Outside of the PicoSDK dependency, Morningstar is a clean, ready to run out-of-the-box piece of software. To do this, we use [PyInstaller](https://pyinstaller.org/en/stable/) to output an .exe program that includes all required Python dependencies (both the packages and the interpreter).
+
+To package the latest changes into the .exe format, ``cd /scripts`` and run:
+
+```powershell
+pyinstaller pyinstaller.spec
+```
+
+This will bundle the Python scripts into a single executable called ``main.exe`` which can be found here: ``scripts/dist/morningstar/main.exe``.
+
+#### Godot
+Coming soon...
+
+#### Makefile
+Coming soon...
