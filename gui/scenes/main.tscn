@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cpmefhvf5myj3"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_2om02"]
-[ext_resource type="Texture2D" uid="uid://dtd3fj22o0cy5" path="res://assets/textures/ui_background.png" id="1_77qsr"]
+[ext_resource type="Texture2D" uid="uid://cd1kdqb8k5uov" path="res://assets/textures/ui_background2.png" id="2_4wcbt"]
 [ext_resource type="PackedScene" uid="uid://dbtgnlgjeoxj4" path="res://widgets/bar_chart/bar_chart.tscn" id="3_o3hiu"]
 [ext_resource type="PackedScene" uid="uid://da8mcrgmlo1i0" path="res://widgets/multiplot_chart/multiplot_chart.tscn" id="4_2qgpk"]
 
@@ -17,7 +17,7 @@ script = ExtResource("1_2om02")
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
 scale = Vector2(0.972973, 1)
-texture = ExtResource("1_77qsr")
+texture = ExtResource("2_4wcbt")
 
 [node name="Button1" type="Button" parent="."]
 layout_mode = 0
