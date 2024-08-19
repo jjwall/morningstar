@@ -26,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="CheckButton" type="CheckButton" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
@@ -39,6 +40,7 @@ text = "Start Relatime Plotting"
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(0, 0, 0, 1)

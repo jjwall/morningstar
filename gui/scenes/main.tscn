@@ -37,10 +37,10 @@ text = "Test Script 2
 
 [node name="BarChart" parent="." instance=ExtResource("3_o3hiu")]
 layout_mode = 1
-offset_left = 462.0
-offset_top = 39.0
-offset_right = -41.0
-offset_bottom = -244.0
+offset_left = 316.0
+offset_top = 21.0
+offset_right = -22.0
+offset_bottom = -169.0
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

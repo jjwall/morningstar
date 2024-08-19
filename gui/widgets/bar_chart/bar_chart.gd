@@ -14,11 +14,11 @@ func plot_points(voltages):
 
 func _ready():
 	# Let's create our @x values
-	var x: Array = [0]
+	var x: Array = [0, 1000, 2000, 3000, 4000, 5000]
 	
 	# And our y values. It can be an n-size array of arrays.
 	# NOTE: `x.size() == y.size()` or `x.size() == y[n].size()`
-	var y: Array = [0]
+	var y: Array = [1000, 1000, 1000, 1000, 1000, 1000]
 	
 	# Let's customize the chart properties, which specify how the chart
 	# should look, plus some additional elements like labels, the scale, etc...
@@ -29,10 +29,12 @@ func _ready():
 	cp.colors.ticks = Color("#283442")
 	cp.colors.text = Color.WHITE_SMOKE
 	cp.y_scale = 10
+	cp.x_scale = 5
 	cp.draw_origin = true
 	cp.draw_bounding_box = false
 	cp.draw_vertical_grid = false
 	cp.interactive = true # false by default, it allows the chart to create a tooltip to show point values
+	cp.max_samples = 5000
 	# and interecept clicks on the plot
 	
 	# Let's add values to our functions
