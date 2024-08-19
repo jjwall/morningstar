@@ -16,7 +16,8 @@ func _on_button_1_pressed() -> void:
 	var voltages = str_to_var(outputs[1])
 	#$WavelengthChart.plot_chart(voltages)
 	#print(voltages)
-	$BarChart.plot_points(voltages)
+	#$BarChart.plot_points(voltages)
+	$MultiplotChart.plot_points(voltages)
 
 
 func _on_button_2_pressed() -> void:
