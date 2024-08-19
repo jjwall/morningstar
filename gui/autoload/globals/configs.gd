@@ -6,4 +6,4 @@ enum python_env_types {
 	PACKAGE, # Targets Pyinstaller package. No Python interpeter necessary.
 }
 
-const python_env: python_env_types = python_env_types.PACKAGE
+const python_env: python_env_types = python_env_types.VIRTUAL

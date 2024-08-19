@@ -9,13 +9,13 @@ var f3: Function
 
 func _ready():
 	# Let's create our @x values
-	var x: Array = ArrayOperations.multiply_float(range(-10, 11, 1), 0.5)
+	var x: Array = [0, 1, 2, 3, 4, 5]#ArrayOperations.multiply_float(range(-10, 11, 1), 0.5)
 	
 	# And our y values. It can be an n-size array of arrays.
 	# NOTE: `x.size() == y.size()` or `x.size() == y[n].size()`
-	var y: Array = ArrayOperations.multiply_int(ArrayOperations.cos(x), 20)
-	var y2: Array = ArrayOperations.add_float(ArrayOperations.multiply_int(ArrayOperations.sin(x), 20), 20)
-	var y3: Array = ArrayOperations.add_float(ArrayOperations.multiply_int(ArrayOperations.cos(x), -5), -3)
+	var y: Array = [0, 0, 0, 0, 0, 0] #ArrayOperations.multiply_int(ArrayOperations.cos(x), 20)
+	#var y2: Array = ArrayOperations.add_float(ArrayOperations.multiply_int(ArrayOperations.sin(x), 20), 20)
+	#var y3: Array = ArrayOperations.add_float(ArrayOperations.multiply_int(ArrayOperations.cos(x), -5), -3)
 	
 	# Let's customize the chart properties, which specify how the chart
 	# should look, plus some additional elements like labels, the scale, etc...

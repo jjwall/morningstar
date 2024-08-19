@@ -20,7 +20,7 @@ def init_subparsers(subparsers: argparse._SubParsersAction):
 def capture_wavelengths(args):
     # print(args.my_integer + 3)
     # print(args.my_string)
-    print("hi there picosdk")
+    # print("hi there picosdk")
     # Create chandle and status ready for use
     chandle = ctypes.c_int16()
     status = {}
@@ -173,12 +173,15 @@ def capture_wavelengths(args):
     # Create time data
     time = np.linspace(0, (cmaxSamples.value - 1) * timeIntervalns.value, cmaxSamples.value)
 
+    print(time)
+    print(adc2mVChAMax[:])
+
     # plot data from channel A and B
-    plt.plot(time, adc2mVChAMax[:])
-    plt.plot(time, adc2mVChBMax[:])
-    plt.xlabel('Time (ns)')
-    plt.ylabel('Voltage (mV)')
-    plt.show()
+    # plt.plot(time, adc2mVChAMax[:])
+    # plt.plot(time, adc2mVChBMax[:])
+    # plt.xlabel('Time (ns)')
+    # plt.ylabel('Voltage (mV)')
+    # plt.show()
 
     # Stop the scope
     # handle = chandle
