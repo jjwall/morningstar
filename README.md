@@ -78,11 +78,11 @@ pip install -r requirements.txt
 ### Godot GUI
 Download [Godot 4.3](https://godotengine.org/releases/4.3/) and extract the contents to your desired location. Run the ``Godot_v4.3-stable_win64.exe`` program and import the ``project.godot`` file that can be found here: [gui/project.godot](gui/project.godot).
 
-Godot is a great tool for making video games and GUI driven software applications. If you're new to using it, [GDQuest](https://www.gdquest.com/) has some great free guides to get started with.
+Godot is a great tool for making video games and GUI-driven software applications. If you're new to using it, [GDQuest](https://www.gdquest.com/) has some great free guides to get started with.
 
 ### Packaging
 #### Python
-Outside of the PicoSDK dependency, Morningstar is a clean, ready to run out-of-the-box piece of software. To do this, we use [PyInstaller](https://pyinstaller.org/en/stable/) to output an .exe program that includes all required Python dependencies (both the packages and the interpreter).
+Outside of the PicoSDK dependency, Morningstar is a clean and ready to run out-of-the-box piece of software. To do this, we use [PyInstaller](https://pyinstaller.org/en/stable/) to output an .exe program that includes all required Python dependencies (both the packages and the interpreter).
 
 To package the latest changes into the .exe format, ``cd /scripts`` and run:
 
@@ -91,6 +91,9 @@ pyinstaller pyinstaller.spec
 ```
 
 This will bundle the Python scripts into a single executable called ``main.exe`` which can be found here: ``scripts/dist/morningstar/main.exe``.
+
+> <b>Note</b>: This is the program that is targeted when the Godot ``python_env`` config is set to ``PACKAGE``.
+
 
 #### Godot
 Coming soon...
