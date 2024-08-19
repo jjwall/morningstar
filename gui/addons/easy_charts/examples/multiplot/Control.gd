@@ -4,10 +4,53 @@ extends Control
 
 # This Chart will plot 3 different functions
 var f1: Function
-var f2: Function
-var f3: Function
+#var f2: Function
+#var f3: Function
+
+#func plot_chart(voltages: Array):
+	##var time = []
+	##for n in voltages.size():
+		##time.append(0)
+	#
+	#var x: Array = [0, 1, 2, 3, 4, 5]#ArrayOperations.multiply_float(range(-10, 11, 1), 0.5)
+	#
+	## And our y values. It can be an n-size array of arrays.
+	## NOTE: `x.size() == y.size()` or `x.size() == y[n].size()`
+	#var y: Array = [0, 0, 0, 0, 0, 0] #ArrayOperations.multiply_int(ArrayOperations.cos(x), 20)
+		#
+	#f1 = Function.new(
+		#x, y, "Wavelength",
+		#{ 
+			#color = Color("#36a2eb"), 		# The color associated to this function
+			#marker = Function.Marker.NONE, 	# The marker that will be displayed for each drawn point (x,y)
+											## since it is `NONE`, no marker will be shown.
+			#type = Function.Type.AREA, 		# This defines what kind of plotting will be used, 
+											## in this case it will be an Area Chart.
+			#interpolation = Function.Interpolation.LINEAR	# Interpolation mode, only used for 
+															## Line Charts and Area Charts.
+		#}
+	#)
+	#var cp: ChartProperties = ChartProperties.new()
+	#cp.colors.frame = Color("#161a1d")
+	#cp.colors.background = Color.TRANSPARENT
+	#cp.colors.grid = Color("#283442")
+	#cp.colors.ticks = Color("#283442")
+	#cp.colors.text = Color.WHITE_SMOKE
+	#cp.draw_bounding_box = false
+	#cp.show_legend = true
+	#cp.title = "Wavelength Chart"
+	#cp.x_label = "Time"
+	#cp.y_label = "Voltage"
+	#cp.x_scale = 5
+	#cp.y_scale = 10
+	#cp.interactive = true # false by default, it allows the chart to create a tooltip to show point values
+	#chart.plot([f1], cp)
+	#set_process(false)
 
 func _ready():
+	set_process(false)
+
+func plot_chart(voltages):
 	# Let's create our @x values
 	var x: Array = [0, 1, 2, 3, 4, 5]#ArrayOperations.multiply_float(range(-10, 11, 1), 0.5)
 	

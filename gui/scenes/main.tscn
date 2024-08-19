@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpmefhvf5myj3"]
+[gd_scene load_steps=3 format=3 uid="uid://cpmefhvf5myj3"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_2om02"]
 [ext_resource type="Texture2D" uid="uid://dtd3fj22o0cy5" path="res://assets/textures/ui_background.png" id="1_77qsr"]
-[ext_resource type="PackedScene" uid="uid://7v0v5lsl0kqe" path="res://widgets/wavelength_chart/control.tscn" id="3_2675m"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -34,13 +33,6 @@ offset_right = 340.0
 offset_bottom = 600.0
 text = "Test Script 2
 "
-
-[node name="WavelengthChart" parent="." instance=ExtResource("3_2675m")]
-layout_mode = 1
-offset_left = 417.0
-offset_top = 44.0
-offset_right = -51.0
-offset_bottom = -219.0
 
 [connection signal="pressed" from="Button1" to="." method="_on_button_1_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
