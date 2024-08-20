@@ -1,6 +1,5 @@
 extends Control
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Console.text = ""
@@ -13,11 +12,8 @@ func _process(delta: float) -> void:
 
 func _on_button_1_pressed() -> void:
 	var outputs = Python.exec_capture_wavelengths()
-	var voltages = str_to_var(outputs[1])
-	#$WavelengthChart.plot_chart(voltages)
-	#print(voltages)
-	#$BarChart.plot_points(voltages)
-	log_to_console("Voltages are as follows: " + outputs[1])
+	var voltages = str_to_var(outputs[0])
+	log_to_console("Voltages are as follows: " + outputs[0])
 	$MultiplotChart.plot_points(voltages)
 
 

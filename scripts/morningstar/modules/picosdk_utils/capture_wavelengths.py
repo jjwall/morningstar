@@ -85,8 +85,8 @@ def capture_wavelengths(args):
     assert_pico_ok(status["trigger"])
 
     # Set number of pre and post trigger samples to be collected
-    preTriggerSamples = 2500
-    postTriggerSamples = 2500
+    preTriggerSamples = 100
+    postTriggerSamples = 100
     maxSamples = preTriggerSamples + postTriggerSamples
 
     # Get timebase information
@@ -173,8 +173,8 @@ def capture_wavelengths(args):
     # Create time data
     time = np.linspace(0, (cmaxSamples.value - 1) * timeIntervalns.value, cmaxSamples.value)
 
-    print(time)
     print(adc2mVChAMax[:])
+    print(time)
 
     # plot data from channel A and B
     # plt.plot(time, adc2mVChAMax[:])

@@ -1,6 +1,7 @@
 extends Control
 
 @onready var chart: Chart = $VBoxContainer/Chart
+var cp: ChartProperties
 
 # This Chart will plot 3 different functions
 var f1: Function
@@ -9,11 +10,16 @@ func plot_points(voltages):
 	for n in voltages.size():
 		f1.add_point(n + 1, voltages[n])
 		chart.queue_redraw()
+	cp.max_samples = voltages.size()
+	instantiate_chart()
 
 func reset_chart():
 	f1.__x = [0, 1000, 2000, 3000, 4000, 5000]
 	f1.__y = [-1000, -1000, -1000, -1000, -1000, -1000]
 	chart.queue_redraw()
+
+func instantiate_chart():
+	chart.plot([f1], cp)
 
 func _ready():
 	# Let's create our @x values
@@ -27,7 +33,7 @@ func _ready():
 	
 	# Let's customize the chart properties, which specify how the chart
 	# should look, plus some additional elements like labels, the scale, etc...
-	var cp: ChartProperties = ChartProperties.new()
+	cp = ChartProperties.new()
 	cp.colors.frame = Color.TRANSPARENT
 	cp.colors.background = Color.TRANSPARENT
 	cp.colors.grid = Color("#283442")
@@ -42,7 +48,7 @@ func _ready():
 	cp.x_scale_type = 1
 	cp.y_scale = 6
 	cp.interactive = true # false by default, it allows the chart to create a tooltip to show point values
-	cp.max_samples = 5000
+	cp.max_samples = 1000
 	# and interecept clicks on the plot
 	
 	# Let's add values to our functions
@@ -69,18 +75,3 @@ func _ready():
 	
 	# Uncommenting this line will show how real time data plotting works
 	set_process(false)
-
-
-var new_val: float = 4.5
-
-func _process(delta: float):
-	# This function updates the values of a function and then updates the plot
-	new_val += 5
-	
-	# we can use the `Function.add_point(x, y)` method to update a function
-	f1.add_point(new_val, cos(new_val) * 20)
-	chart.queue_redraw() # This will force the Chart to be updated
-
-
-func _on_CheckButton_pressed():
-	set_process(not is_processing())
