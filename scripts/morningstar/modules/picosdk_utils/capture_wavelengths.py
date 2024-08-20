@@ -13,8 +13,8 @@ from morningstar.lib.picosdk.functions import adc2mV, assert_pico_ok, mV2adc # t
 
 def init_subparsers(subparsers: argparse._SubParsersAction):
     parser_test_picosdk_module = subparsers.add_parser('capture_wavelengths')
-    # parser_test_picosdk_module.add_argument('my_integer', type=int)
-    # parser_test_picosdk_module.add_argument('my_string')
+    parser_test_picosdk_module.add_argument('pre_trigger_sample_count', type=int)
+    parser_test_picosdk_module.add_argument('post_trigger_sample_count', type=int)
     parser_test_picosdk_module.set_defaults(func=capture_wavelengths)
 
 def capture_wavelengths(args):
@@ -85,8 +85,8 @@ def capture_wavelengths(args):
     assert_pico_ok(status["trigger"])
 
     # Set number of pre and post trigger samples to be collected
-    preTriggerSamples = 100
-    postTriggerSamples = 100
+    preTriggerSamples = args.pre_trigger_sample_count # 2500
+    postTriggerSamples = args.post_trigger_sample_count # 2500
     maxSamples = preTriggerSamples + postTriggerSamples
 
     # Get timebase information

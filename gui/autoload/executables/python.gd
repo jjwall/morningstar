@@ -35,8 +35,8 @@ func _execute_compiled_python_program(args: PackedStringArray) -> Array:
 #endregion
 
 #region Public python helpers to be consumed by GUI
-func exec_capture_wavelengths():
-	var args = ['capture_wavelengths']
+func exec_capture_wavelengths(pre_trigger_sample_count: int, post_trigger_sample_count: int):
+	var args = ['capture_wavelengths', pre_trigger_sample_count, post_trigger_sample_count]
 	return _execute_python_program(args)
 
 func exec_test_mircatsdk_module(my_string: String, my_integer: int):

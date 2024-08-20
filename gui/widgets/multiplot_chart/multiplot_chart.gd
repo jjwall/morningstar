@@ -41,7 +41,8 @@ func _ready():
 	cp.colors.text = Color.WHITE_SMOKE
 	cp.draw_bounding_box = false
 	#cp.show_legend = true
-	cp.title = "Wavelengths Chart"
+	cp.show_y_label = false
+	cp.title = "Waveform Chart"
 	cp.x_label = "Time (800 n/s)"
 	cp.y_label = "Voltage (mV)"
 	cp.x_scale = 5

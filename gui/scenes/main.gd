@@ -11,7 +11,9 @@ func _process(delta: float) -> void:
 
 
 func _on_button_1_pressed() -> void:
-	var outputs = Python.exec_capture_wavelengths()
+	var pre_trigger_sample_count: int = int($PreTriggerInput.text)
+	var post_trigger_sample_count: int = int($PostTriggerInput.text)
+	var outputs = Python.exec_capture_wavelengths(pre_trigger_sample_count, post_trigger_sample_count)
 	var voltages = str_to_var(outputs[0])
 	log_to_console("Voltages are as follows: " + outputs[0])
 	$MultiplotChart.plot_points(voltages)
